@@ -7,7 +7,7 @@ import { Row } from 'primereact/row';
 
 import { DataInvest, numberFormat } from '@components/UploadCSV/Upload';
 
-import * as S from '../../pages/Invest/style';
+import * as S from './style';
 
 type DataTableProps = {
   data: DataInvest[];
@@ -48,18 +48,38 @@ export const DataTable: FC<DataTableProps> = ({ data }) => {
         scrollHeight="flex"
         footerColumnGroup={footer}
       >
-        <Column field="type" header="Tipo de Investimento"></Column>
-        <Column field="description" header="Descrição"></Column>
+        <Column
+          field="type"
+          header="Tipo de Investimento"
+          headerClassName="column-nowrap"
+        ></Column>
+        <Column
+          field="description"
+          header="Descrição"
+          headerClassName="column-nowrap"
+        ></Column>
         <Column
           field="investedAmount"
           header="Valor Aplicado"
+          headerClassName="column-nowrap"
           align="right"
         ></Column>
-        <Column field="grossAmount" header="Valor Bruto" align="right"></Column>
-        <Column field="netAmount" header="Valor Líquido" align="right"></Column>
+        <Column
+          field="grossAmount"
+          header="Valor Bruto"
+          headerClassName="column-nowrap"
+          align="right"
+        ></Column>
+        <Column
+          field="netAmount"
+          header="Valor Líquido"
+          headerClassName="column-nowrap"
+          align="right"
+        ></Column>
         <Column
           field="income"
           header="Rendimento"
+          headerClassName="column-nowrap"
           align="right"
           body={statusValue}
         ></Column>

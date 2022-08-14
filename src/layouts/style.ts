@@ -22,4 +22,11 @@ export const Wrapper = styled.main`
   padding: 0.5rem 1rem;
 `;
 
-export const Content = styled.div``;
+export const Version = styled.div`
+  font-size: 10px;
+  color: var(--text-color);
+
+  &::before {
+    content: 'v';
+  }
+`;

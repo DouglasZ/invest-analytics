@@ -1,10 +1,11 @@
-import { FC, ReactNode, useState } from 'react';
+import { FC, ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { Card } from 'primereact/card';
-import { InputText } from 'primereact/inputtext';
 import { Menubar } from 'primereact/menubar';
 import { MenuItem } from 'primereact/menuitem';
+
+import pack from '@package';
 
 import * as S from './style';
 
@@ -44,7 +45,11 @@ export const DefaultLayout: FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <S.Header>
-        <Menubar model={items} start={start} />
+        <Menubar
+          model={items}
+          start={start}
+          end={<S.Version>{pack.version}</S.Version>}
+        />
       </S.Header>
       <S.Wrapper>
         <Card>{children}</Card>
