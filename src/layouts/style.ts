@@ -17,8 +17,8 @@ export const Header = styled.header`
 export const Wrapper = styled.main`
   margin: 0 auto;
   max-width: 1170px;
-  height: calc(100vh - 64px);
-  overflow: auto;
+  height: calc(100vh - 60px);
+  //overflow: auto;
   padding: 0.5rem 1rem;
 `;
 
